@@ -1,0 +1,33 @@
+Configuring cpphs-1.20.8...
+Building cpphs-1.20.8...
+Preprocessing library cpphs-1.20.8...
+[ 1 of 11] Compiling Language.Preprocessor.Unlit ( Language/Preprocessor/Unlit.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Unlit.o )
+[ 2 of 11] Compiling Language.Preprocessor.Cpphs.SymTab ( Language/Preprocessor/Cpphs/SymTab.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/SymTab.o )
+[ 3 of 11] Compiling Language.Preprocessor.Cpphs.Position ( Language/Preprocessor/Cpphs/Position.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/Position.o )
+[ 4 of 11] Compiling Language.Preprocessor.Cpphs.ReadFirst ( Language/Preprocessor/Cpphs/ReadFirst.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/ReadFirst.o )
+[ 5 of 11] Compiling Language.Preprocessor.Cpphs.Options ( Language/Preprocessor/Cpphs/Options.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/Options.o )
+[ 6 of 11] Compiling Language.Preprocessor.Cpphs.HashDefine ( Language/Preprocessor/Cpphs/HashDefine.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/HashDefine.o )
+[ 7 of 11] Compiling Language.Preprocessor.Cpphs.Tokenise ( Language/Preprocessor/Cpphs/Tokenise.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/Tokenise.o )
+[ 8 of 11] Compiling Language.Preprocessor.Cpphs.MacroPass ( Language/Preprocessor/Cpphs/MacroPass.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/MacroPass.o )
+[ 9 of 11] Compiling Language.Preprocessor.Cpphs.CppIfdef ( Language/Preprocessor/Cpphs/CppIfdef.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/CppIfdef.o )
+[10 of 11] Compiling Language.Preprocessor.Cpphs.RunCpphs ( Language/Preprocessor/Cpphs/RunCpphs.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs/RunCpphs.o )
+[11 of 11] Compiling Language.Preprocessor.Cpphs ( Language/Preprocessor/Cpphs.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Preprocessor/Cpphs.o )
+Preprocessing executable 'cpphs' for cpphs-1.20.8...
+[ 1 of 12] Compiling Language.Preprocessor.Unlit ( Language/Preprocessor/Unlit.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Unlit.o )
+[ 2 of 12] Compiling Language.Preprocessor.Cpphs.SymTab ( Language/Preprocessor/Cpphs/SymTab.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/SymTab.o )
+[ 3 of 12] Compiling Language.Preprocessor.Cpphs.Position ( Language/Preprocessor/Cpphs/Position.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/Position.o )
+[ 4 of 12] Compiling Language.Preprocessor.Cpphs.ReadFirst ( Language/Preprocessor/Cpphs/ReadFirst.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/ReadFirst.o )
+[ 5 of 12] Compiling Language.Preprocessor.Cpphs.Options ( Language/Preprocessor/Cpphs/Options.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/Options.o )
+[ 6 of 12] Compiling Language.Preprocessor.Cpphs.HashDefine ( Language/Preprocessor/Cpphs/HashDefine.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/HashDefine.o )
+[ 7 of 12] Compiling Language.Preprocessor.Cpphs.Tokenise ( Language/Preprocessor/Cpphs/Tokenise.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/Tokenise.o )
+[ 8 of 12] Compiling Language.Preprocessor.Cpphs.MacroPass ( Language/Preprocessor/Cpphs/MacroPass.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/MacroPass.o )
+[ 9 of 12] Compiling Language.Preprocessor.Cpphs.CppIfdef ( Language/Preprocessor/Cpphs/CppIfdef.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/CppIfdef.o )
+[10 of 12] Compiling Language.Preprocessor.Cpphs.RunCpphs ( Language/Preprocessor/Cpphs/RunCpphs.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs/RunCpphs.o )
+[11 of 12] Compiling Language.Preprocessor.Cpphs ( Language/Preprocessor/Cpphs.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Language/Preprocessor/Cpphs.o )
+[12 of 12] Compiling Main             ( cpphs.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/cpphs/cpphs ...
+Installing library in
+/Users/amadhavan1/.stack/snapshots/x86_64-osx/lts-9.5/8.0.2/lib/x86_64-osx-ghc-8.0.2/cpphs-1.20.8-3Fssq2K4VwkKSMahhwZtBR
+Installing executable(s) in
+/Users/amadhavan1/.stack/snapshots/x86_64-osx/lts-9.5/8.0.2/bin
+Registering cpphs-1.20.8...

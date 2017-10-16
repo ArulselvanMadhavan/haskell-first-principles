@@ -1,0 +1,23 @@
+Configuring haskell-src-exts-1.18.2...
+Building haskell-src-exts-1.18.2...
+Preprocessing library haskell-src-exts-1.18.2...
+[ 1 of 17] Compiling Language.Haskell.Exts.Syntax ( src/Language/Haskell/Exts/Syntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Syntax.o )
+[ 2 of 17] Compiling Language.Haskell.Exts.SrcLoc ( src/Language/Haskell/Exts/SrcLoc.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/SrcLoc.o )
+[ 3 of 17] Compiling Language.Haskell.Exts.ParseSyntax ( src/Language/Haskell/Exts/ParseSyntax.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/ParseSyntax.o )
+[ 4 of 17] Compiling Language.Haskell.Exts.Pretty ( src/Language/Haskell/Exts/Pretty.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Pretty.o )
+[ 5 of 17] Compiling Language.Haskell.Exts.Fixity ( src/Language/Haskell/Exts/Fixity.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Fixity.o )
+[ 6 of 17] Compiling Language.Haskell.Exts.Extension ( src/Language/Haskell/Exts/Extension.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Extension.o )
+[ 7 of 17] Compiling Language.Haskell.Exts.ExtScheme ( src/Language/Haskell/Exts/ExtScheme.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/ExtScheme.o )
+[ 8 of 17] Compiling Language.Haskell.Exts.Comments ( src/Language/Haskell/Exts/Comments.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Comments.o )
+[ 9 of 17] Compiling Language.Haskell.Exts.ExactPrint ( src/Language/Haskell/Exts/ExactPrint.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/ExactPrint.o )
+[10 of 17] Compiling Language.Haskell.Exts.ParseMonad ( src/Language/Haskell/Exts/ParseMonad.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/ParseMonad.o )
+[11 of 17] Compiling Language.Haskell.Exts.InternalLexer ( src/Language/Haskell/Exts/InternalLexer.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/InternalLexer.o )
+[12 of 17] Compiling Language.Haskell.Exts.Lexer ( src/Language/Haskell/Exts/Lexer.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Lexer.o )
+[13 of 17] Compiling Language.Haskell.Exts.ParseUtils ( src/Language/Haskell/Exts/ParseUtils.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/ParseUtils.o )
+[14 of 17] Compiling Language.Haskell.Exts.InternalParser ( .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/InternalParser.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/InternalParser.o )
+[15 of 17] Compiling Language.Haskell.Exts.Parser ( src/Language/Haskell/Exts/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Parser.o )
+[16 of 17] Compiling Language.Haskell.Exts.Build ( src/Language/Haskell/Exts/Build.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts/Build.o )
+[17 of 17] Compiling Language.Haskell.Exts ( src/Language/Haskell/Exts.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Language/Haskell/Exts.o )
+Installing library in
+/Users/amadhavan1/.stack/snapshots/x86_64-osx/lts-9.5/8.0.2/lib/x86_64-osx-ghc-8.0.2/haskell-src-exts-1.18.2-Kjop5wIioOPX4MdOWk71u
+Registering haskell-src-exts-1.18.2...

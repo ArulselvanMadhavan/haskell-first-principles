@@ -1,0 +1,116 @@
+Configuring conduit-1.2.12...
+Building conduit-1.2.12...
+Preprocessing library conduit-1.2.12...
+[1 of 8] Compiling Data.Conduit.Internal.Pipe ( Data/Conduit/Internal/Pipe.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/Internal/Pipe.o )
+
+Data/Conduit/Internal/Pipe.hs:228:11: warning: [-Winline-rule-shadowing]
+    Rule "conduit: CI.await >>= maybe" may never fire
+      because ‘maybe’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘maybe’
+
+Data/Conduit/Internal/Pipe.hs:237:11: warning: [-Winline-rule-shadowing]
+    Rule "conduit: awaitE >>= either" may never fire
+      because ‘either’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘either’
+
+Data/Conduit/Internal/Pipe.hs:279:5: warning: [-Winline-rule-shadowing]
+    Rule "lift m >>= CI.yield" may never fire
+      because ‘lift’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘lift’
+
+Data/Conduit/Internal/Pipe.hs:641:11: warning: [-Winline-rule-shadowing]
+    Rule "conduit: Pipe: lift x >>= f" may never fire
+      because ‘lift’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘lift’
+
+Data/Conduit/Internal/Pipe.hs:642:11: warning: [-Winline-rule-shadowing]
+    Rule "conduit: Pipe: lift x >> f" may never fire
+      because ‘lift’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘lift’
+[2 of 8] Compiling Data.Conduit.Internal.Conduit ( Data/Conduit/Internal/Conduit.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/Internal/Conduit.o )
+
+Data/Conduit/Internal/Conduit.hs:89:1: warning: [-Wdodgy-imports]
+    Module ‘Prelude’ does not export ‘catch’
+
+Data/Conduit/Internal/Conduit.hs:869:11: warning: [-Winline-rule-shadowing]
+    Rule "conduit: await >>= maybe" may never fire
+      because ‘maybe’ might inline first
+    Probable fix: add an INLINE[n] or NOINLINE[n] pragma for ‘maybe’
+[3 of 8] Compiling Data.Conduit.Internal.Fusion ( Data/Conduit/Internal/Fusion.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/Internal/Fusion.o )
+[4 of 8] Compiling Data.Conduit.Internal.List.Stream ( Data/Conduit/Internal/List/Stream.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/Internal/List/Stream.o )
+[5 of 8] Compiling Data.Conduit.Internal ( Data/Conduit/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/Internal.o )
+[6 of 8] Compiling Data.Conduit     ( Data/Conduit.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit.o )
+[7 of 8] Compiling Data.Conduit.Lift ( Data/Conduit/Lift.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/Lift.o )
+
+Data/Conduit/Lift.hs:84:1: warning: [-Wdeprecations]
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+Data/Conduit/Lift.hs:188:26: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:188:56: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:190:29: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:193:12: warning: [-Wdeprecations]
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:199:16: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:200:20: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:205:25: warning: [-Wdeprecations]
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:210:56: warning: [-Wdeprecations]
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:219:16: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:220:20: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:221:29: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:222:23: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Data/Conduit/Lift.hs:227:32: warning: [-Wdeprecations]
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[8 of 8] Compiling Data.Conduit.List ( Data/Conduit/List.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Conduit/List.o )
+Installing library in
+/Users/amadhavan1/.stack/snapshots/x86_64-osx/lts-9.5/8.0.2/lib/x86_64-osx-ghc-8.0.2/conduit-1.2.12-Lvx0NKWTZH4BnyzXR667l8
+Registering conduit-1.2.12...

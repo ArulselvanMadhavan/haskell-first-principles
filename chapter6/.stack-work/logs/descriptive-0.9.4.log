@@ -1,0 +1,18 @@
+Configuring descriptive-0.9.4...
+Building descriptive-0.9.4...
+Preprocessing library descriptive-0.9.4...
+[1 of 7] Compiling Descriptive.Internal ( src/Descriptive/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive/Internal.o )
+[2 of 7] Compiling Descriptive      ( src/Descriptive.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive.o )
+[3 of 7] Compiling Descriptive.Char ( src/Descriptive/Char.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive/Char.o )
+
+src/Descriptive/Char.hs:9:1: warning: [-Wunused-imports]
+    The import of ‘Data.Traversable’ is redundant
+      except perhaps to import instances from ‘Data.Traversable’
+    To import instances alone, use: import Data.Traversable()
+[4 of 7] Compiling Descriptive.Form ( src/Descriptive/Form.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive/Form.o )
+[5 of 7] Compiling Descriptive.Formlet ( src/Descriptive/Formlet.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive/Formlet.o )
+[6 of 7] Compiling Descriptive.JSON ( src/Descriptive/JSON.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive/JSON.o )
+[7 of 7] Compiling Descriptive.Options ( src/Descriptive/Options.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Descriptive/Options.o )
+Installing library in
+/Users/amadhavan1/.stack/snapshots/x86_64-osx/lts-9.5/8.0.2/lib/x86_64-osx-ghc-8.0.2/descriptive-0.9.4-5kcioGwLa0x1q6RpRsUiR6
+Registering descriptive-0.9.4...

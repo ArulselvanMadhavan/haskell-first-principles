@@ -1,0 +1,18 @@
+[1 of 3] Compiling Warning          ( Warning.hs, /private/var/folders/9d/xndw6pq93h9g_485h2vbnqln5qpnqh/T/stack12253/distributive-0.5.3/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/setup/Warning.o )
+[2 of 3] Compiling Main             ( /private/var/folders/9d/xndw6pq93h9g_485h2vbnqln5qpnqh/T/stack12253/distributive-0.5.3/Setup.lhs, /private/var/folders/9d/xndw6pq93h9g_485h2vbnqln5qpnqh/T/stack12253/distributive-0.5.3/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/setup/Main.o )
+
+/private/var/folders/9d/xndw6pq93h9g_485h2vbnqln5qpnqh/T/stack12253/distributive-0.5.3/Setup.lhs:24:1: warning: [-Wdeprecations]
+    Module ‘Warning’:
+      You are configuring this package without cabal-doctest installed.
+      The doctests test-suite will not work as a result.
+      To fix this, install cabal-doctest before configuring.
+[3 of 3] Compiling StackSetupShim   ( /Users/amadhavan1/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /private/var/folders/9d/xndw6pq93h9g_485h2vbnqln5qpnqh/T/stack12253/distributive-0.5.3/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/setup/StackSetupShim.o )
+Linking /private/var/folders/9d/xndw6pq93h9g_485h2vbnqln5qpnqh/T/stack12253/distributive-0.5.3/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/setup/setup ...
+Configuring distributive-0.5.3...
+Building distributive-0.5.3...
+Preprocessing library distributive-0.5.3...
+[1 of 2] Compiling Data.Distributive ( src/Data/Distributive.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Distributive.o )
+[2 of 2] Compiling Data.Distributive.Generic ( src/Data/Distributive/Generic.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Data/Distributive/Generic.o )
+Installing library in
+/Users/amadhavan1/.stack/snapshots/x86_64-osx/lts-9.5/8.0.2/lib/x86_64-osx-ghc-8.0.2/distributive-0.5.3-IX4kyVcHAyoH4uFYrsjY1R
+Registering distributive-0.5.3...
