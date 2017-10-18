@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/amadhavan1/dev/haskell-projects/haskell-first-principles/chapter11/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/bin"
-libdir     = "/Users/amadhavan1/dev/haskell-projects/haskell-first-principles/chapter11/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/lib/x86_64-osx-ghc-8.0.2/chapter11-0.1.0.0-Gt4pqC8wt0YGxWanI21aQt"
+libdir     = "/Users/amadhavan1/dev/haskell-projects/haskell-first-principles/chapter11/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/lib/x86_64-osx-ghc-8.0.2/chapter11-0.1.0.0-BiHvwiGtP9p7j7vWyE3YgJ"
 dynlibdir  = "/Users/amadhavan1/dev/haskell-projects/haskell-first-principles/chapter11/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/lib/x86_64-osx-ghc-8.0.2"
 datadir    = "/Users/amadhavan1/dev/haskell-projects/haskell-first-principles/chapter11/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/share/x86_64-osx-ghc-8.0.2/chapter11-0.1.0.0"
 libexecdir = "/Users/amadhavan1/dev/haskell-projects/haskell-first-principles/chapter11/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/libexec"

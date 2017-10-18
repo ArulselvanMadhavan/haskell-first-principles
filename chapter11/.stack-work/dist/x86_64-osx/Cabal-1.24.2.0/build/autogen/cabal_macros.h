@@ -14,6 +14,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package containers-0.5.7.1 */
+#define VERSION_containers "0.5.7.1"
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 7)
+
 /* tool alex-3.2.1 */
 #define TOOL_VERSION_alex "3.2.1"
 #define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
@@ -84,7 +91,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 2)
 
-#define CURRENT_COMPONENT_ID "chapter11-0.1.0.0-Gt4pqC8wt0YGxWanI21aQt"
+#define CURRENT_COMPONENT_ID "chapter11-0.1.0.0-BiHvwiGtP9p7j7vWyE3YgJ"
 
-#define CURRENT_PACKAGE_KEY "chapter11-0.1.0.0-Gt4pqC8wt0YGxWanI21aQt"
+#define CURRENT_PACKAGE_KEY "chapter11-0.1.0.0-BiHvwiGtP9p7j7vWyE3YgJ"
 
