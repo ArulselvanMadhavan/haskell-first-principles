@@ -14,6 +14,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package split-0.2.3.2 */
+#define VERSION_split "0.2.3.2"
+#define MIN_VERSION_split(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 3)
+
 /* tool alex-3.2.1 */
 #define TOOL_VERSION_alex "3.2.1"
 #define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
@@ -84,7 +91,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 2)
 
-#define CURRENT_COMPONENT_ID "chapter13-0.1.0.0-JIwhXW1vzQH3M0koGfMBUU"
+#define CURRENT_COMPONENT_ID "chapter13-0.1.0.0-LRGXSXpvPDd59EG5t2Ye5x"
 
-#define CURRENT_PACKAGE_KEY "chapter13-0.1.0.0-JIwhXW1vzQH3M0koGfMBUU"
+#define CURRENT_PACKAGE_KEY "chapter13-0.1.0.0-LRGXSXpvPDd59EG5t2Ye5x"
 
