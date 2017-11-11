@@ -1,5 +1,6 @@
 module Main where
 import qualified Bull
+import qualified IdentitySemigroup
 import qualified MaybeMonoidTest
 import qualified MonoidTestUtils
 import qualified SemigroupUtils
@@ -12,3 +13,4 @@ main = do
     Bull.runTests
     SemigroupUtils.runTests
     TrivialSemigroup.runTests
+    IdentitySemigroup.runTests
