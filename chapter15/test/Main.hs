@@ -1,6 +1,7 @@
 module Main where
 import qualified BoolConj
 import qualified Bull
+import qualified Combine
 import qualified FourSemigroup
 import qualified IdentitySemigroup
 import qualified MaybeMonoidTest
@@ -9,6 +10,7 @@ import qualified OrSemigroup
 import qualified SemigroupUtils
 import qualified TrivialSemigroup
 import qualified TwoSemigroup
+import qualified Validation
 
 main :: IO ()
 main = do
@@ -22,3 +24,5 @@ main = do
     FourSemigroup.runTests
     BoolConj.runTests
     OrSemigroup.runTests
+    Validation.runTests
+    Combine.runTests
