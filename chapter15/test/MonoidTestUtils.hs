@@ -1,3 +1,4 @@
+module MonoidTestUtils where
 import           Data.Monoid
 import           Test.QuickCheck
 
@@ -21,7 +22,7 @@ testStringLeftIdentity :: IO ()
 testStringLeftIdentity =
     quickCheck (monoidLeftIdentity :: String -> Bool)
 
-main :: IO ()
-main = do
+runTests :: IO ()
+runTests = do
     testStringMonoidAssoc
     testStringLeftIdentity
