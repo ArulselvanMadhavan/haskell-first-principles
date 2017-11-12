@@ -1,7 +1,8 @@
 {-# LANGUAGE DeriveGeneric #-}
 module Combine where
 
-import qualified Data.Semigroup  as S
+import           Data.List.NonEmpty as N
+import qualified Data.Semigroup     as S
 import           GHC.Generics
 import           Test.QuickCheck
 
@@ -22,6 +23,10 @@ instance (Arbitrary a) => Arbitrary (Sum a) where
         a <- arbitrary
         return $ Sum a
 
+instance (Num a) => Monoid (Sum a) where
+    mempty = Sum 0
+    mappend (Sum x) (Sum y) = Sum (x + y)
+
 newtype Combine a b =
     Combine {unCombine :: (a -> b)}
 
@@ -41,6 +46,10 @@ instance (Num b) => S.Semigroup (Combine a b) where
 --     arbitrary = do
 --         a <- arbitrary
 --         return $ Combine a
+
+instance (Num b, Monoid b) => Monoid (Combine a b) where
+    mempty = (Combine (\x -> mempty x))
+    mappend = (S.<>)
 
 combineAssoc :: (Eq b, Num b) => Combine a b -> Combine a b -> Combine a b -> a -> Bool
 combineAssoc f g h val =
@@ -64,6 +73,23 @@ testFunc3 x =
 -- funcGen =
 --     coarbitrary 0 arbitrary
 
+combineLeftIdentity ::(Eq b, Monoid b, Num b) => Combine a b -> a -> Bool
+combineLeftIdentity f val =
+    let x = unCombine (mappend f mempty) $ val
+        y = unCombine f $ val
+    in
+      x == y
+
+combineRightIdentity :: (Eq b, Monoid b, Num b) => Combine a b -> a -> Bool
+combineRightIdentity f val =
+    let x = unCombine (mappend mempty f) $ val
+        y = unCombine f $ val
+    in
+      x == y
+
+
 runTests :: IO ()
 runTests = do
     quickCheck ((combineAssoc (Combine testFunc1) (Combine testFunc2) (Combine testFunc3)) :: Int -> Bool)
+    quickCheck ((combineLeftIdentity (Combine testFunc1)) :: Int -> Bool)
+    quickCheck ((combineRightIdentity (Combine testFunc1)) :: Int -> Bool)

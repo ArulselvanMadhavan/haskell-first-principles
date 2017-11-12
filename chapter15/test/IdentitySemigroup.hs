@@ -1,12 +1,18 @@
 module IdentitySemigroup where
 
+import qualified Data.Monoid     as M
 import           Data.Semigroup
+import           MonoidTestUtils
 import           Test.QuickCheck
 
 newtype Identity a = Identity a deriving (Eq, Show)
 
 instance Semigroup a => Semigroup (Identity a) where
     (Identity x) <> (Identity y) = Identity (x <> y)
+
+instance (Semigroup a, Monoid a) => Monoid (Identity a) where
+    mempty = Identity (mempty)
+    mappend = (<>)
 
 instance Arbitrary a => Arbitrary (Identity a) where
     arbitrary = identityGen
@@ -26,3 +32,5 @@ type IdentityAssoc =
 runTests :: IO ()
 runTests = do
     quickCheck (identityAssoc :: IdentityAssoc)
+    quickCheck (monoidLeftIdentity :: (Identity String) -> Bool)
+    quickCheck (monoidRightIdentity :: (Identity String) -> Bool)

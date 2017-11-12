@@ -1,6 +1,8 @@
 module TwoSemigroup where
+
 import qualified Data.List.NonEmpty as N
 import           Data.Semigroup
+import           MonoidTestUtils
 import           Test.QuickCheck
 
 data Two a b =
@@ -12,6 +14,9 @@ instance (Semigroup a, Semigroup b) => Semigroup (Two a b) where
 
 instance (Arbitrary a, Arbitrary b) => Arbitrary (Two a b) where
     arbitrary = twoGen
+instance (Semigroup a, Semigroup b, Monoid a, Monoid b) => Monoid (Two a b) where
+    mempty = Two (mempty) (mempty)
+    mappend = (<>)
 
 twoGen :: (Arbitrary a, Arbitrary b) => Gen (Two a b)
 twoGen = do
@@ -30,3 +35,5 @@ type TwoAssocStringInt = TwoStringInt -> TwoStringInt -> TwoStringInt -> Bool
 runTests :: IO ()
 runTests = do
     quickCheck (twoAssoc :: TwoAssocStringInt)
+    quickCheck (monoidLeftIdentity :: TwoStringInt -> Bool)
+    quickCheck (monoidRightIdentity :: TwoStringInt -> Bool)

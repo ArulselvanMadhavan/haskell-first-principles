@@ -13,6 +13,9 @@ instance Arbitrary BoolConj where
     arbitrary = frequency [ (1, return $ BoolConj True)
                           , (1, return $ BoolConj False)
                           ]
+instance Monoid BoolConj where
+    mempty = BoolConj True
+    mappend = (<>)
 
 boolConjAssoc :: BoolConj -> BoolConj -> BoolConj -> Bool
 boolConjAssoc a b c =
