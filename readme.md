@@ -18,3 +18,15 @@ Applied on a per operation basis
 
 ### Semigroup
 A monoid where the Identity property is left out.
+
+### Magma
+Magma < Semigroup < Monoid
+
+### Functor
+A way to apply a function over or around some structure that we don't want to alter.
+
+Functor laws
+```hs
+fmap id = id
+fmap (p . q) = (fmap p) . (fmap q)
+```
