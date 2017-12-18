@@ -25,7 +25,7 @@ Magma < Semigroup < Monoid
 ### Functor
 A way to apply a function over or around some structure that we don't want to alter.
 
-Functor laws
+Functor laws - <$> - Function application over a structure
 ```hs
 fmap id = id
 fmap (p . q) = (fmap p) . (fmap q)
