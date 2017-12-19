@@ -1,10 +1,26 @@
 {-# LANGUAGE ViewPatterns #-}
 
+import           InstancesOfFunc
 import           Test.QuickCheck
 import           Test.QuickCheck.Function
 
 type IntToInt = Fun Int Int
+
 type IntFC = [Int] -> IntToInt -> IntToInt -> Bool
+
+type IdentityCompose = Identity Int -> IntToInt -> IntToInt -> Bool
+
+type PairCompose = Pair Int -> IntToInt -> IntToInt -> Bool
+
+type TwoCompose = Two String Int -> IntToInt -> IntToInt -> Bool
+
+type ThreeCompose = Three Bool String Int -> IntToInt -> IntToInt -> Bool
+
+type ThreeCompose' = Three' String Int -> IntToInt -> IntToInt -> Bool
+
+type FourCompose = Four String Int String Int -> IntToInt -> IntToInt -> Bool
+
+type FourCompose' = Four' String Int -> IntToInt -> IntToInt -> Bool
 
 functorIdentity :: (Functor f, Eq (f a)) => f a -> Bool
 functorIdentity f = fmap id f == f
@@ -21,3 +37,17 @@ main = do
   quickCheck (functorIdentity :: [Int] -> Bool)
   quickCheck (functorCompose (+ 1) (* 2) :: [Int] -> Bool)
   quickCheck (functorCompose' :: IntFC)
+  quickCheck (functorIdentity :: (Identity Int) -> Bool)
+  quickCheck (functorCompose' :: IdentityCompose)
+  quickCheck (functorIdentity :: (Pair Int) -> Bool)
+  quickCheck (functorCompose' :: PairCompose)
+  quickCheck (functorIdentity :: (Two String Int) -> Bool)
+  quickCheck (functorCompose' :: TwoCompose)
+  quickCheck (functorIdentity :: (Three Bool String Int) -> Bool)
+  quickCheck (functorCompose' :: ThreeCompose)
+  quickCheck (functorIdentity :: (Three' String Int) -> Bool)
+  quickCheck (functorCompose' :: ThreeCompose')
+  quickCheck (functorIdentity :: (Four String Int String Int) -> Bool)
+  quickCheck (functorCompose' :: FourCompose)
+  quickCheck (functorIdentity :: (Four' String Int) -> Bool)
+  quickCheck (functorCompose' :: FourCompose')
