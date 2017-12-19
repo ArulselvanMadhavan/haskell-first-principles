@@ -30,3 +30,7 @@ Functor laws - <$> - Function application over a structure
 fmap id = id
 fmap (p . q) = (fmap p) . (fmap q)
 ```
+
+QuickCheck
+1. Arbitrary typeclass is used for generating values
+2. CoArbitrary typeclass is used for generating functions
