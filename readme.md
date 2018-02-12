@@ -31,6 +31,11 @@ fmap id = id
 fmap (p . q) = (fmap p) . (fmap q)
 ```
 
+Functor instances are unique for a given datatype as opposed to monoid which is unique per operation.
+
 QuickCheck
 1. Arbitrary typeclass is used for generating values
 2. CoArbitrary typeclass is used for generating functions
+
+### TODO
+1. I haven't done Chapter16 Chapter Exercise 11.
