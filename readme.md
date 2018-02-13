@@ -53,6 +53,5 @@ class Functor f => Applicative f where
       => f (a -> b) -> f a -> f b
 ```
 
-
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
