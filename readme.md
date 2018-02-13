@@ -37,5 +37,22 @@ QuickCheck
 1. Arbitrary typeclass is used for generating values
 2. CoArbitrary typeclass is used for generating functions
 
+Applicative
+1. Applicatives are monoidal functors.
+
+```haskell
+class Functor f => Applicative f where
+      pure :: a -> f a
+      <*>  :: f (a -> b) -> f a -> f b
+```
+2. Comparison with Functor
+```haskell
+(<$>) :: Functor f
+      => (a -> b) -> f a -> f b
+(<*>) :: Applicative f
+      => f (a -> b) -> f a -> f b
+```
+
+
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
