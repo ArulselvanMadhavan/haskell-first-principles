@@ -1,4 +1,5 @@
 module Cow where
+import           Control.Applicative
 
 data Cow = Cow
   { name   :: String
@@ -27,3 +28,7 @@ cowFromString n a w =
 cowFromString' :: String -> Int -> Int -> Maybe Cow
 cowFromString' n a w =
     Cow <$> noEmpty n <*> noNegative a <*> noNegative w
+
+cowFromString'' :: String -> Int -> Int -> Maybe Cow
+cowFromString'' n a w =
+    liftA3 Cow (noEmpty n) (noNegative a) (noNegative w)
