@@ -20,5 +20,5 @@ instance Monoid Bull where
 instance EqProp Bull where
   (=-=) = eq
 
-main :: IO ()
-main = quickBatch (monoid Twoo)
+runTests :: IO ()
+runTests = quickBatch (monoid Twoo)

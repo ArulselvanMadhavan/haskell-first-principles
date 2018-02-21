@@ -46,3 +46,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - chapter17
+    - checkers
+    - QuickCheck

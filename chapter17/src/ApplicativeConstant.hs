@@ -1,7 +1,8 @@
 module ApplicativeConstant where
 
 newtype Sum a = Sum
-  { getSum :: a
+  {
+      getSum :: a
   } deriving (Eq, Show)
 
 instance (Num a) => Monoid (Sum a) where

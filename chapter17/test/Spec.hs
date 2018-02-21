@@ -1,2 +1,6 @@
+module Main where
+import qualified BadMonoid
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = do
+    BadMonoid.runTests
