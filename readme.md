@@ -45,7 +45,8 @@ class Functor f => Applicative f where
       pure :: a -> f a
       <*>  :: f (a -> b) -> f a -> f b
 ```
-2. Comparison with Functor
+2. <*> - is called "apply".
+3. Comparison with Functor
 ```haskell
 (<$>) :: Functor f
       => (a -> b) -> f a -> f b
@@ -71,5 +72,9 @@ pure f <*> pure x = pure (f x)
 ```haskell
 u <*> pure y = pure ($ y) <*> u
 ```
+
+Applicative is just function application that preserves without doing anything other than
+combining the structure bits.
+
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
