@@ -21,18 +21,15 @@ instance Applicative List where
 instance Eq a => EqProp (List a) where
   (=-=) = eq
 
+instance Arbitrary a => Arbitrary (List a) where
+  arbitrary = sized arbitraryList
+
 -- https://stackoverflow.com/questions/45592769/instance-of-arbitrary-for-custom-list-like-type
 arbitraryList :: Arbitrary a => Int -> Gen (List a)
 arbitraryList m
   | m == 0 = return Nil
   | m < 6 = Cons <$> arbitrary <*> arbitraryList (m - 1) --To Prevent long runnign tests.
   | otherwise = Cons <$> arbitrary <*> arbitraryList 5
-
-instance Arbitrary a => Arbitrary (List a) where
-  arbitrary = sized arbitraryList
-
-listD :: List (String, String, Int)
-listD = Cons ("A", "b", 3) Nil
 
 append :: List a -> List a -> List a
 append Nil ys         = ys
@@ -48,5 +45,7 @@ concat' = fold append Nil
 flatMap :: (a -> List b) -> List a -> List b
 flatMap f as = concat' $ fmap f as
 
-runTests :: IO ()
-runTests = quickBatch (applicative listD)
+take' :: Int -> List a -> List a
+take' _ Nil = Nil
+take' n (Cons x xs)
+  | n == 0 = Nil

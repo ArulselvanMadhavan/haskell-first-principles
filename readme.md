@@ -10,6 +10,11 @@ stack install QuickCheck
 stack ghci <project_name>:<test_module_name>
 ```
 
+### To make GHC notice changes to package.yaml
+```bash
+stack build
+```
+
 ### Monoid
 Applied on a per operation basis
 1. Binary
