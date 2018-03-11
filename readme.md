@@ -78,8 +78,11 @@ pure f <*> pure x = pure (f x)
 u <*> pure y = pure ($ y) <*> u
 ```
 
-Applicative is just function application that preserves without doing anything other than
+1. Applicative is just function application that preserves without doing anything other than
 combining the structure bits.
+2. Applicative can have more than one valid and lawful instance for a given datatype.
+
+
 
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
