@@ -82,7 +82,9 @@ u <*> pure y = pure ($ y) <*> u
 combining the structure bits.
 2. Applicative can have more than one valid and lawful instance for a given datatype.
 
-
+```quote
+Applicative can be thought of characterizing Monoidal Functors in Haskell
+```
 
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
