@@ -38,3 +38,17 @@ bind f xs =
 * Monad is not a value. It's a typeclass just like functor, applicative.
 * Monad is not about strictness.
 
+## Identity Laws
+
+```haskell
+m >>= return = m
+return x >> = f = f x
+```
+
+## Associativity Law
+
+```haskell
+(m >>= f) >>= g = m >>= (\x -> f x >>= g)
+```
+
+
