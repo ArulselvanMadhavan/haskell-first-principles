@@ -1,2 +1,6 @@
+module Main where
+import qualified ChapterExercise1Tests
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = do
+    ChapterExercise1Tests.runTests
