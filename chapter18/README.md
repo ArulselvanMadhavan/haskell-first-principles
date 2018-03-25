@@ -51,12 +51,7 @@ return x >> = f = f x
 (m >>= f) >>= g = m >>= (\x -> f x >>= g)
 ```
 
-### Monadic Composition
-```haskell
-mcomp :: Monad m => (b -> m c) -> (a -> m b) -> a -> m c
-mcomp f g a = g a >>= f
-```              
-
+### Monadic Composition - Kleisli Composition
 ```haskell
 (>=>) :: Monad m => (a -> m b) -> (b -> m c) -> a -> m c
 ```
