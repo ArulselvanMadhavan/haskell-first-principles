@@ -88,7 +88,7 @@ Applicative can be thought of characterizing Monoidal Functors in Haskell
 
 ## Monad
 
-[Notes on Monad][chapter18/README.md]
+[Notes on Monad](chapter18/README.md)
 
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
