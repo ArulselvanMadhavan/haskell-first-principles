@@ -9,5 +9,7 @@ Generalizing catamorphisms to other datatypes depends on understanding monoids f
 ```haskell
 class Foldable (t :: * -> *) where
       {-# MINIMAL foldMap | foldr #-}
+      fold :: Monoid m => t m => m
+      foldMap :: Monoid m => (a -> m) -> t a -> m
 ```
 3. Folding necessarily implies a binary associative operation that has an identity value.
