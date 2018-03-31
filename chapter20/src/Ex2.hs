@@ -1,4 +1,5 @@
 module Ex2 where
+import           Control.Applicative (liftA)
 import           Data.Monoid
 
 data Constant a b =
@@ -43,3 +44,12 @@ instance (Show a, Show b, Monoid b) => Show (Three' a b) where
 instance Foldable (Three' a) where
     foldMap f (Three' a b1 b2) = (<>) (f b1) (f b2)
     foldr f c (Three' a b1 b2) = f b2 c --We can't use monoid here
+
+filterF :: (Applicative f, Foldable t, Monoid (f a)) => (a -> Bool) -> t a -> f a
+filterF g t =
+  foldMap
+    (\a ->
+       if (g a)
+         then (pure a)
+         else mempty)
+    t
