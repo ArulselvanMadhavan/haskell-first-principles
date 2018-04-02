@@ -12,3 +12,36 @@ class (Functor t, Foldable f) w=> Traversable t where
       sequenceA = traverse id
       {-# MINIMAL traverse | sequenceA #-}
 ```
+
+Traversable is stronger than Functor and Foldable. We can recover Functor and Foldable instance from Traversable.
+
+## Traversable laws
+1. Naturality
+
+```haskell
+t . traverse f = traverse (t . f)
+```
+2. Identity
+```haskell
+traverse Identity = Identity
+```
+3. Composition
+```haskell
+traverse (Compose . fmap g . f) =
+         Compose . fmap (traverse g) . traverse f
+```
+
+## SequenceA Laws
+1. Naturality
+```haskell
+t . sequenceA = sequenceA . fmap t
+```
+2. Identity
+```haskell
+sequenceA . fmap Identity = Identity
+```
+3. Composition
+```haskell
+sequenceA . fmap Compose =
+          Compose . fmap sequenceA . sequenceA
+```

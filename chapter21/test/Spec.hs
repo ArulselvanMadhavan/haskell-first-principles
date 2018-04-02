@@ -1,2 +1,7 @@
+import qualified ConstantInstanceTests as CI
+import qualified IdentityInstanceTests as IT
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = do
+    IT.runTests
+    CI.runTests
