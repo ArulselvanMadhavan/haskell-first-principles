@@ -11,8 +11,7 @@ data S n a =
   deriving (Eq, Show)
 
 instance (Functor n, Arbitrary (n a), Arbitrary a) => Arbitrary (S n a) where
-  arbitrary = do
-    S <$> arbitrary <*> arbitrary
+  arbitrary = S <$> arbitrary <*> arbitrary
 
 instance (Applicative n, Testable (n Property), EqProp a) =>
          EqProp (S n a) where
@@ -30,6 +29,6 @@ instance Foldable n => Foldable (S n) where
   foldr f z (S n a) = f a z
 
 instance Traversable n => Traversable (S n) where
-    traverse f (S n a) = let res1 = sequenceA $ fmap f n --Traversable n (Applicative b)
+    traverse f (S n a) = let res1 = traverse f n --Traversable (Applicative b) to Applicative (Traversable b)
                          in
                            S <$> res1 <*> f a

@@ -26,6 +26,7 @@ instance Foldable Optional where
 
 instance Traversable Optional where
   traverse f (Yep a) = Yep <$> f a
+  traverse f Nada    = pure Nada
 
 instance Arbitrary a => Arbitrary (Optional a) where
   arbitrary = do
