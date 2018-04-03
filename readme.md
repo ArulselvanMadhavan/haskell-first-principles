@@ -90,5 +90,13 @@ Applicative can be thought of characterizing Monoidal Functors in Haskell
 
 [Notes on Monad](chapter18/README.md)
 
+## Foldable
+[Notes on Foldable](chapter19/README.md)
+
+## Traversable
+[Notes on Traversable](chapter20/README.md)
+
 ### TODO
 1. I haven't done Chapter16 Chapter Exercise 11.
+2. Chapter 21 - Tests for Exercise SkiFree are failing.
+3. Chapter 21 - Need to write Arbitrary Instance for Tree and finish the test.

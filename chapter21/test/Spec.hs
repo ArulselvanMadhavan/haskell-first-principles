@@ -5,7 +5,7 @@ import qualified SkiFreeTests          as SI
 
 main :: IO ()
 main = do
-    -- IT.runTests
-    -- CI.runTests
-    -- MI.runTests
-    SI.runTests
+    IT.runTests
+    CI.runTests
+    MI.runTests
+    -- SI.runTests
