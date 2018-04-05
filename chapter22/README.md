@@ -1,1 +1,19 @@
-# chapter22
+# chapter22 - Reader
+
+1. The Functor of functions is function composition.
+2. The Applicative and Monad chain the argument forward in addition to the composition.
+
+Reader - It is a way of stringing functions together when all those functions are awaiting one input from a shared environment. It's another way of abstracting out function application and gives us a way to do computation in terms of an argument that hasn't been supplied yet.
+
+```
+Reader is a newtype wrapper for the function type
+```
+
+```haskell
+newtype Reader r a =
+        Reader { runReader :: r -> a }
+
+instance Functor (Reader r) where
+         fmap :: (a -> b) -> Reader r a -> Reader r b
+         fmap f (Reader ra) = Reader $ \r -> f (ra r)
+```
