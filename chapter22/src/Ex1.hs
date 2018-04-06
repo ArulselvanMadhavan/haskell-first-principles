@@ -23,3 +23,9 @@ instance Applicative (Reader r) where
 -- (DogName -> Address -> Dog) <$> (Person -> DogName) <*> (Person -> Address)
 -- (Person -> Address -> Dog) <*> (Person -> Address)
 -- (Person -> Address)
+
+
+instance Monad (Reader r) where
+  return :: a -> Reader r a
+  return = pure
+  (>>=) (Reader ra) arb = Reader (\r -> (flip ($) r) . runReader . arb . ra $ r)
