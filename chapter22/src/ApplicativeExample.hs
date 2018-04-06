@@ -42,3 +42,9 @@ getDogR = Dog <$> dogName <*> address
 
 getDogR' :: Person -> Dog
 getDogR' = liftA2 Dog dogName address
+
+getDogRM :: Person -> Dog
+getDogRM = do
+  dn <- dogName
+  ad <- address
+  return $ Dog dn ad

@@ -17,3 +17,21 @@ instance Functor (Reader r) where
          fmap :: (a -> b) -> Reader r a -> Reader r b
          fmap f (Reader ra) = Reader $ \r -> f (ra r)
 ```
+
+```haskell
+(>>=) :: Monad m => m a -> (a -> m b) -> m b
+(>>=) :: (->) r a -> (a -> (->) r b) -> (->) r b
+(>>=) :: (r -> a) -> (a -> r -> b) -> r -> b
+
+return :: Monad m => a -> m a
+return :: a -> (->) r a
+return :: a -> r -> a
+```
+
+## Applicative vs Monad for Reader
+```haskell
+<*> :: (r -> a -> b) -> (r -> a) -> (r -> b)
+(>>=) :: (->) r a -> (a -> (->) r b) -> (r -> b)
+(>>=) :: (r -> a) -> (a -> r -> b) -> (r -> b)
+(=>>) :: (a -> r -> b) -> (r -> a) -> (r -> b)
+```

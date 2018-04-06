@@ -18,7 +18,7 @@ instance Applicative (Reader r) where
   pure :: a -> Reader r a
   pure a = Reader (\r -> a)
   (<*>) :: Reader r (b -> c) -> Reader r b -> Reader r c
-  (<*>) (Reader rbc) (Reader rb) = Reader (\r -> ((rbc r) . rb $ r))
+  (<*>) (Reader rbc) (Reader rb) = Reader (\r -> (rbc r) . rb $ r)
 
 -- (DogName -> Address -> Dog) <$> (Person -> DogName) <*> (Person -> Address)
 -- (Person -> Address -> Dog) <*> (Person -> Address)
