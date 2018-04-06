@@ -35,3 +35,5 @@ return :: a -> r -> a
 (>>=) :: (r -> a) -> (a -> r -> b) -> (r -> b)
 (=>>) :: (a -> r -> b) -> (r -> a) -> (r -> b)
 ```
+
+```Reader Monad by itself is boring because it can't do anything that the Applicative can't```
