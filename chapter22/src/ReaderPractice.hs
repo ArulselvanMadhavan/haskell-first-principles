@@ -48,6 +48,9 @@ bolt = liftA2 (&&) (> 3) (< 8)
 fromMaybe' :: a -> Maybe a -> a
 fromMaybe' a ma = foldr (\a1 _ -> a1) a ma
 
+sequA :: Integer -> [Bool]
+sequA = sequenceA [(>3), (<8), even]
+
 main :: IO ()
 main = do
   print $ sequenceA [Just 3, Just 2, Just 1]
@@ -56,3 +59,7 @@ main = do
   print $ fmap summed ((,) <$> xs <*> zs)
   print $ bolt 7
   print $ fmap bolt z
+  print $ sequenceA [(>3), (<8), even] 7
+  print $ foldr (&&) True $ sequA 7
+  print $ sequA . fromMaybe' 0 $ ys
+  print $ bolt . fromMaybe' 0 $  ys
