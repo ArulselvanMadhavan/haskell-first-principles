@@ -21,6 +21,15 @@ description:         Please see the README on Github at <https://github.com/Arul
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring
+- hedis
+- mtl
+- network-uri
+- random
+- scotty
+- semigroups
+- text
+- transformers
 
 library:
   source-dirs: src
