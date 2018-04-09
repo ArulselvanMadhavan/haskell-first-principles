@@ -21,6 +21,8 @@ description:         Please see the README on Github at <https://github.com/Arul
 
 dependencies:
 - base >= 4.7 && < 5
+- random
+- transformers
 
 library:
   source-dirs: src
