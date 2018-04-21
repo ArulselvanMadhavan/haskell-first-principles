@@ -55,3 +55,13 @@ class Applicative f => Alternative f where
 lexer :: Stream Char -> Stream Token -- Also known as tokenizers
 parser :: Stream Token -> AST
 ```
+
+## Marshalling and Unmarshalling
+
+```haskell
+Text -> Structure -> Meaning -- Unmarshalling/deserializing
+Meaning -> Structure -> Text -- Marshalling/serializing
+```
+
+JSON
+1. aeson
