@@ -27,7 +27,7 @@ type Parser' a = String -> [(a, String)]
 ```
 
 ## Haskell Parsers
-1. parsec
+1. parsec - extensively documented
 2. attoparsec - (Suitable for production - very speed parsing)
 3. megaparsec
 4. trifecta - easy to read error messages
@@ -48,4 +48,10 @@ class Applicative f => Alternative f where
            where
             many_v = some_v <|> pure []
             some_v = (fmap (:) v) <*> many_v
+```
+
+### Token Parsers
+```haskell
+lexer :: Stream Char -> Stream Token -- Also known as tokenizers
+parser :: Stream Token -> AST
 ```

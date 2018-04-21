@@ -28,6 +28,8 @@ dependencies:
 - bytestring
 - containers
 - text
+- attoparsec
+- parsec
 library:
   source-dirs: src
 
