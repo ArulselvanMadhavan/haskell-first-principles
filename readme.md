@@ -15,6 +15,11 @@ stack ghci <project_name>:<test_module_name>
 stack build
 ```
 
+### To enable QuasiQuotes
+```haskell
+:set -ddump-splices
+```
+
 ### Monoid
 Applied on a per operation basis
 1. Binary
