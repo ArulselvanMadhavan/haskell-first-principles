@@ -22,8 +22,6 @@ parseAllNums :: Parser PhoneNumber
 parseAllNums = do
   try $ do
     xs <- count 10 digit
-    -- You don't have to parse and count. You can count first and fail
-    -- fast
     return $ mkPhoneNumber . L.splitPlaces [3, 3, 4] $ xs
 
 parseHyphenated :: Parser PhoneNumber
