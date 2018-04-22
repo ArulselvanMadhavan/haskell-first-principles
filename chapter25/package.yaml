@@ -1,6 +1,6 @@
-name:                chapter24
+name:                chapter25
 version:             0.1.0.0
-github:              "ArulselvanMadhavan/chapter24"
+github:              "ArulselvanMadhavan/chapter25"
 license:             BSD3
 author:              "Arulselvan Madhavan"
 maintainer:          "arulselvan1234@gmail.com"
@@ -17,27 +17,16 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on Github at <https://github.com/ArulselvanMadhavan/chapter24#readme>
+description:         Please see the README on Github at <https://github.com/ArulselvanMadhavan/chapter25#readme>
 
 dependencies:
 - base >= 4.7 && < 5
-- trifecta
-- parsers
-- raw-strings-qq
-- hspec
-- bytestring
-- containers
-- text
-- attoparsec
-- parsec
-- aeson
-- scientific
-- split
+
 library:
   source-dirs: src
 
 executables:
-  chapter24-exe:
+  chapter25-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -45,10 +34,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - chapter24
+    - chapter25
 
 tests:
-  chapter24-test:
+  chapter25-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -56,4 +45,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - chapter24
+    - chapter25

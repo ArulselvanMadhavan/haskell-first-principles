@@ -2,10 +2,10 @@ module Ex1 where
 import           Control.Applicative
 import           Text.Trifecta
 
-data NumberOrString =
-    NOSS String
-    | NOSI Integer
-    deriving (Eq, Show)
+data NumberOrString
+  = NOSS String
+  | NOSI Integer
+  deriving (Ord, Eq, Show)
 
 type Major = Integer
 type Minor = Integer
@@ -19,7 +19,7 @@ data SemVer =
          Patch
          Release
          Metadata
-  deriving (Eq, Show)
+  deriving (Ord, Eq, Show)
 
 parseDotOrDash :: Parser Char
 parseDotOrDash = char '.' <|> char '-'
