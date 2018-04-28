@@ -12,3 +12,7 @@ Ex: MaybeT is a transformer variant of Maybe
 2. This allows us to compose monads and combine their effects.
 
 ## Identity is boring
+
+*Monad transformer is a type constructor that takes a monad as an argument and returns a Monad as a result.*
+
+The fundamental problem with composing two monads lies in the impossibility of joining two unknown monads.

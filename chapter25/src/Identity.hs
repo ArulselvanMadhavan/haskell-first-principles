@@ -20,7 +20,10 @@ instance (Applicative f, Applicative g) => Applicative (Compose f g) where
   pure :: a -> Compose f g a
   pure a = Compose $ (pure . pure) a
   (<*>) :: Compose f g (a -> b) -> Compose f g a -> Compose f g b
-  -- f (g (a -> b)) -> f (g a) -> f (g b)
-  -- (a1 -> a2 -> b) -> ((a1 -> a2) -> a1) -> (a1 -> a2) -> b
-  -- (Compose f) <*> (Compose a) = Compose $ fmap (\gab -> gab <*> (fmap \ga ->)) f
   (Compose f) <*> (Compose a) = Compose $ liftA2 (<*>) f a
+
+instance (Foldable f, Foldable g) => Foldable (Compose f g) where
+  foldMap am (Compose fga) = (foldMap . foldMap) am fga
+
+instance (Traversable f, Traversable g) => Traversable (Compose f g) where
+  traverse ahb (Compose fga) = Compose <$> (traverse . traverse) ahb fga
