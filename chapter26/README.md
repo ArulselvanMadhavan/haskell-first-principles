@@ -15,3 +15,10 @@ class MonadTrans t where
       -- Lift a computation from the argument monad to the constructed monad
       lift :: (Monad m) => m a -> t m a
 ```
+
+## MonadIO
+```haskell
+class (Monad m) => MonadIO m where
+      -- Lift a computation from the IO monad
+      liftIO :: IO a -> m a
+```
