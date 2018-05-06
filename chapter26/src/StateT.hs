@@ -3,7 +3,9 @@
 module StateT where
 
 import           Control.Applicative
-import           Data.Tuple          (swap)
+import           Control.Monad
+import           Control.Monad.Trans.Class
+import           Data.Tuple                (swap)
 
                  -- Stricter version
 newtype StateT s m a = StateT
@@ -30,3 +32,10 @@ instance (Monad m) => Monad (StateT s m) where
     StateT $ \s -> do
       (a, ss) <- sma s
       (runStateT . f $ a) ss
+
+instance MonadTrans (StateT s) where
+  lift m =
+    StateT
+      (\s -> do
+         a <- m
+         return (a, s))
