@@ -5,6 +5,7 @@ Managing stacks of monad transformers is tricky.
 Base Monad - Structurally outermost
 
 ```haskell
+newtype MaybeT = MaybeT {runMaybeT :: m (Maybe a)}
 newtype StateT = StateT {runStateT :: s -> m (a, s)}
 newtype ReaderT = ReaderT {runReaderT :: r -> m a}
 ```
@@ -34,3 +35,7 @@ class (Monad m) => MonadIO m where
 liftIO :: IO a -> StateT s (ReaderT r IO) a
 liftIO :: IO a -> ExceptT e (StateT s (ReaderT r IO)) a
 ```
+
+### Transform only if you have to
+1. Most of the time you can get by with `liftIO` and plain `IO` actions, functions, `Maybe` values.
+2. Do the simplest thing first
