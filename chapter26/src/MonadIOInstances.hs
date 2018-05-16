@@ -1,4 +1,4 @@
-module MonadIOInstance where
+module MonadIOInstances where
 
 import           Control.Monad.IO.Class
 import           Control.Monad.Trans.Identity (IdentityT)
