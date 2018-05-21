@@ -25,6 +25,8 @@ dependencies:
 - scotty
 - text
 - either
+- containers
+- text
  
 library:
   source-dirs: src
