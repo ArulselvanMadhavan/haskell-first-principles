@@ -60,5 +60,5 @@ main = do
     [prefixArg] <- getArgs
     counter <- newIORef M.empty
     let config = Config counter (TL.pack prefixArg)
-        runR = undefined
+        runR m = runReaderT m config
     scottyT 3000 runR app
