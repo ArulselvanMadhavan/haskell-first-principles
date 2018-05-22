@@ -13,36 +13,42 @@ data Winner
   | AI
   deriving (Eq, Show)
 
+data Input = Input
+  { value :: Int
+  , guess :: Int
+  } deriving (Eq, Show)
+
+type Guess = (Int, Int)
+
 readValue :: (Read a) => IO a
 readValue = fmap read getLine
 
 shouldQuit :: Char -> Bool
-shouldQuit c = if c == 'q' then True else False
+shouldQuit = (==) 'q'
 
 readAiInput :: IO Int
 readAiInput = getStdRandom (randomR (1, 10))
 
-isContinue :: String -> Bool
-isContinue i =
-    if i == "n" then True else False
-
-getNext :: String -> [(Int, Int)] -> IO [(Int, Int)]
+getNext :: String -> [Guess] -> IO [Guess]
 getNext h1 xs = do
   c2 <- readAiInput
   return $ (read h1, c2) : xs
 
-go :: [(Int, Int)] -> IO [(Int, Int)]
+checkQuitAndContinue :: String -> Maybe String
+checkQuitAndContinue s = undefined
+
+go :: [Guess] -> IO [Guess]
 go current = do
   putStr "Enter your finger count(q-quit):"
   v <- getLine
+  putStr "Enter your guess:"
+  g <- getLine
   if shouldQuit (head v)
     then (return current)
     else (getNext v current) >>= go
 
 main :: IO Int
 main = evalStateT go' []
-
-type Guess = (Int, Int)
 
 go' :: StateT [Guess] IO Int
 go' = do
