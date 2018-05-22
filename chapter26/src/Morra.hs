@@ -1,6 +1,8 @@
 module Morra where
-import System.Random
-import Control.Monad.Trans.State
+import           Control.Monad.IO.Class
+import           Control.Monad.Trans.Class
+import           Control.Monad.Trans.State
+import           System.Random
 
 -- StateT should save scores of both player and computer
 -- Computer should choose its hand randomly
@@ -19,7 +21,7 @@ shouldQuit c = if c == 'q' then True else False
 
 readAiInput :: IO Int
 readAiInput = getStdRandom (randomR (1, 10))
-    
+
 isContinue :: String -> Bool
 isContinue i =
     if i == "n" then True else False
@@ -36,12 +38,14 @@ go current = do
   if shouldQuit (head v)
     then (return current)
     else (getNext v current) >>= go
-        
-main :: IO [(Int, Int)]
-main = go []
+
+main :: IO Int
+main = evalStateT go' []
 
 type Guess = (Int, Int)
 
--- main :: StateT [Guess] IO Int
--- main = do
-    
+go' :: StateT [Guess] IO Int
+go' = do
+  s <- get
+  ss <- liftIO $ go s
+  return $ length ss
