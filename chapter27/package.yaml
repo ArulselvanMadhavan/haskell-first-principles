@@ -1,10 +1,10 @@
-name:                chapter26
+name:                chapter27
 version:             0.1.0.0
-github:              "ArulselvanMadhavan/chapter26"
+github:              "githubuser/chapter27"
 license:             BSD3
-author:              "Arulselvan Madhavan"
-maintainer:          "arulselvan1234@gmail.com"
-copyright:           "MIT"
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2018 Author name here"
 
 extra-source-files:
 - README.md
@@ -17,23 +17,16 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/ArulselvanMadhavan/chapter26#readme>
+description:         Please see the README on GitHub at <https://github.com/githubuser/chapter27#readme>
 
 dependencies:
 - base >= 4.7 && < 5
-- transformers
-- scotty
-- text
-- either
-- containers
-- text
-- random
- 
+
 library:
   source-dirs: src
 
 executables:
-  chapter26-exe:
+  chapter27-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -41,10 +34,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - chapter26
+    - chapter27
 
 tests:
-  chapter26-test:
+  chapter27-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -52,4 +45,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - chapter26
+    - chapter27
