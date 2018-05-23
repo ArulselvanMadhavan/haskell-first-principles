@@ -1,13 +1,14 @@
 module Morra where
-import Data.Maybe
-import Data.Monoid
+
+import           Control.Applicative
 import           Control.Monad
 import           Control.Monad.IO.Class
 import           Control.Monad.Trans.Class
 import           Control.Monad.Trans.Maybe
 import           Control.Monad.Trans.Reader
 import           Control.Monad.Trans.State
-import Control.Applicative
+import           Data.Maybe
+import           Data.Monoid
 import           System.Random
 -- StateT should save scores of both player and computer
 -- Computer should choose its hand randomly
@@ -36,7 +37,7 @@ instance Monoid Score where
   mempty = Score (mempty, mempty)
   (Score (h1, a1)) `mappend` (Score (h2, a2)) =
     Score ((h1 `mappend` h2), (a1 `mappend` a2))
-    
+
 data Winner
   = Humans
   | Computer
@@ -103,7 +104,7 @@ process :: Score -> Maybe Score -> IO Score
 process current maybeNext =
   case maybeNext of
     Just next -> evalStateT go' (current `mappend` next)
-    Nothing -> return current
+    Nothing   -> return current
 
 go' :: StateT Score IO Score
 go' = do
